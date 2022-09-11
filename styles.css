@@ -1,0 +1,128 @@
+.container {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.form-group {
+    width: 60%;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.title {
+    font-size: 21px;
+}
+
+.selected {
+    font-size: 12px;
+    background-color: #c7e6fd;
+}
+
+.not-selected {
+    font-size: 12px;
+}
+
+.weather-card {
+    border-color: #c7e6fd !important;
+    transform: skew(-10deg);
+}
+
+.text {
+    transform: skew(10deg);
+    font-size: 20px;
+}
+
+.temp {
+    font-size: larger;
+    background-color: #c7e6fd;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.temp-explain {
+    font-size: 15px;
+    font-style: italic;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.emoji {
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.text-explain {
+    font-style: italic;
+    color: rgb(221, 61, 93);
+    font-size: 15px;
+}
+
+.text {
+    transform: skew(10deg);
+    font-size: 20px;
+}
+
+.temp {
+    font-size: larger;
+    background-color: #c7e6fd;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.temp-explain {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.text-other {
+    transform: skew(10deg);
+    font-size: 18px;
+}
+
+.temp-other {
+    font-size: medium;
+    background-color: #c7e6fd;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.temp-explain-other {
+    font-size: 15px;
+    font-style: italic;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.text-explain-other {
+    font-style: italic;
+    color: rgb(221, 61, 93);
+    font-size: 15px;
+}
+
+.emoji-other {
+    font-size: 24px;
+    margin-top: -10px;
+}
+
+.text-explain-normal {
+    font-style: italic;
+    color: #386385;
+    font-size: 15px;
+}
+
+.col {
+    margin-top: 30px !important;
+}
+
+#units {
+    position: relative;
+    top: -30px;
+    left: 20px;
+}
