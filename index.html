@@ -1,18 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Wireframe homework week 2</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="src/styles.css" class="rel" />
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <style>
-    h1 {
-      text-align: center;
-      color: blueviolet;
-    }
-  </style>
+
   <body>
-    <h1>Hello Git!</h1>
+    <div class="container">
+     <div class="card">
+        <div class="card-body">
+					<div class="row">
+            <div class="form-group col-8">
+								<form id ="search-form">
+              <input type="text" placeholder="Enter a city here" class="form-control" autofocus="on"/>
+						</div>
+						<div class="col-4">
+								<button type="button" class="btn btn-info" id="current-location-button">Current location</button>
+
+						</div>
+					</div>
+            </br>
+						<span class="title"> Currently showing results for <b><span id ="city-name">Parma</span></span>
+						<p class="subtitle"></p>
+            <span class="selected">TEMPERATURE</span>
+            <span class="not-selected">| PRECIPITATION | WIND </span>
+            </br>
+            </br>
+            <div class="container text-center">
+              <div class="row">
+                    <div class="col-3 m-1 border weather-card">
+                    <p class="text">Today<br>
+                    <p> <span class="temp" id ="temperature">37</span><span id="units">°C</span></p>
+										<p class="temp-explain">Humidty: <span id ="humidity">0</span><span>%</span></p>
+										<p class="temp-explain">Wind: <span id ="wind">0</span> <span>km/h</span></p>
+                    
+                    </div>
+                   <div class="col m-1 border weather-card">
+                    <p class="text-other">Saturday,</br> 6 August </br>
+                    <p class="temp-other">39°C / 27°C</p></br>
+                    <p class="temp-explain-other">High / Low</p>
+                    <p class="emoji-other">🔥</p>
+                    <p class="text-explain-other">Heatwave</p></p>
+                </div>
+                <div class="col m-1 border weather-card">
+                    <p class="text-other">Sunday,</br> 7 August </br>
+                    <p class="temp-other">33°C / 23°C</p></br>
+                    <p class="temp-explain-other">High / Low</p>
+                    <p class="emoji-other">☀️</p>
+                    <p class="text-explain-normal">Sunny</p></p>
+                </div>
+                <div class="col m-1 border weather-card">
+                    <p class="text-other">Monday,</br> 8 August </br>
+                    <p class="temp-other">31°C / 25°C</p></br>
+                    <p class="temp-explain-other">High / Low</p>
+                    <p class="emoji-other">⛅</p>
+                    <p class="text-explain-normal">Partly sunny</p></p>
+                </div>
+                <div class="col m-1 border weather-card">
+                     <p class="text-other">Tuesday,</br> 9 August </br>
+                    <p class="temp-other">30°C / 24°C</p></br>
+                    <p class="temp-explain-other">High / Low</p>
+                    <p class="emoji-other">🌧️</p>
+                    <p class="text-explain-normal">Rain</p></p>
+                </div>
+                <div class="col m-1 border weather-card">
+                    <p class="text-other">Wednesday,</br> 10 August </br>
+                    <p class="temp-other">28°C / 21°C</p></br>
+                    <p class="temp-explain-other">High / Low</p>
+                    <p class="emoji-other">⛈️</p>
+                    <p class="text-explain-normal">Thunderstorms</p></p></p>
+                </div>
+              </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<script src="src/index.js"></script>
