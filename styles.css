@@ -126,3 +126,10 @@
     top: -30px;
     left: 20px;
 }
+
+.link-github {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: #c7e6fd;
+}
