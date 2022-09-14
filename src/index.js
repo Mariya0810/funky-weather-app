@@ -31,7 +31,7 @@ function showTemp(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].icon;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 
 }
 function search(city) {
@@ -46,8 +46,6 @@ function handleSubmit(event) {
   search(city);
 }
 
-search("Parma");
-
 function searchLocation(position) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -61,3 +59,4 @@ function getLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getLocation);
+search("Parma");
