@@ -134,3 +134,11 @@
    margin-top: 10px;
     color: black;
 }
+
+#icon {
+    margin-top: -50px;
+}
+
+#description::first-letter{
+    text-transform: capitalize;
+}
