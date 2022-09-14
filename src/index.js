@@ -18,6 +18,7 @@ let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
 
 function showTemp(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -32,7 +33,7 @@ function showTemp(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
 
-   celsiusTemperature = response.data.main.temp;
+
 
 }
 function search(city) {
