@@ -32,6 +32,8 @@ function showTemp(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
 
+   celsiusTemperature = response.data.main.temp;
+
 }
 function search(city) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
@@ -63,10 +65,13 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", convertFahrenheit);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertCelsius);
-function convertCelsius(event) {
+
+function convertFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperature = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round((5 / 9) * (temperature - 32));}
+    temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+}
+let celsiusTemperature = null;
 
-  search("Parma");
+search("Sofia");
+ 
