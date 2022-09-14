@@ -130,8 +130,3 @@
 #description::first-letter{
     text-transform: capitalize;
 }
-
-.units {
-    position: relative;
-        left: 10px;
-}

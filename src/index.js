@@ -18,7 +18,7 @@ let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
 
 function showTemp(response) {
-  celsiusTemperature = response.data.main.temp;
+  console.log(response.data);
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -31,9 +31,7 @@ function showTemp(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
-
-
+  descriptionElement.innerHTML = response.data.weather[0].icon;
 
 }
 function search(city) {
@@ -48,6 +46,8 @@ function handleSubmit(event) {
   search(city);
 }
 
+search("Parma");
+
 function searchLocation(position) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -61,18 +61,3 @@ function getLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getLocation);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", convertFahrenheit);
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", convertCelsius);
-
-function convertFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-}
-let celsiusTemperature = null;
-
-search("Sofia");
- 
