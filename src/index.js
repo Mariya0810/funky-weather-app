@@ -30,6 +30,9 @@ function showTemp(response) {
   );
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+
 }
 function search(city) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
