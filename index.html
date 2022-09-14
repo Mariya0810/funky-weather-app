@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="styles.css" class="rel" />
+		<link rel="stylesheet" href="src/styles.css" class="rel" />
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
@@ -23,7 +23,7 @@
 					<div class="row">
             <div class="form-group col-8">
 								<form id ="search-form">
-              <input type="text" placeholder="Enter a city here" class="form-control" autofocus="on"/>
+              <input type="text" placeholder="Type a city and press Enter to search" class="form-control" autofocus="on"/>
 						</div>
 						<div class="col-4">
 								<button type="button" class="btn btn-info" id="current-location-button">Current location</button>
@@ -32,11 +32,8 @@
 					</div>
             </br>
 						<span class="title"> Currently showing results for <b><span id ="city-name">Parma</span></span>
-						<p class="subtitle"></p>
-            <span class="selected">TEMPERATURE</span>
-            <span class="not-selected">| PRECIPITATION | WIND </span>
-            </br>
-            </br>
+            <p class="subtitle"> Saturday, 16:00</p>           
+            </br>  
             <div class="container text-center">
               <div class="row">
                     <div class="col-3 m-1 border weather-card">
@@ -90,4 +87,4 @@
     </div>
   </body>
 </html>
-<script src="index.js"></script>
+<script src="src/index.js"></script>

@@ -1,3 +1,19 @@
+let currentDate = document.querySelector(".subtitle");
+let now = new Date();
+let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
+let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+let today = days[now.getDay()];
+currentDate.innerHTML = `${today}, ${hours}:${minutes} CEST`;
+
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
 
@@ -24,7 +40,7 @@ function handleSubmit(event) {
   search(city);
 }
 
-search("Sofia");
+search("Parma");
 
 function searchLocation(position) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
