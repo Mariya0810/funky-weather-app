@@ -62,6 +62,8 @@ currentLocationButton.addEventListener("click", getLocation);
 
 function showFahrenheitTemp (event){
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   let FahrenheitTemp = Math.round((celsiusTemperature * 9/5) + 32);
   temperatureElement.innerHTML = FahrenheitTemp;
@@ -69,7 +71,9 @@ function showFahrenheitTemp (event){
 
 function showCelsiusTemp (event){
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+    let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
