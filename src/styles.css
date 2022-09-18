@@ -40,7 +40,7 @@
 .temp {
     font-size: larger;
     background-color: #c7e6fd;
-    max-width: 80%;
+    max-width: 50%;
     display: block;
     margin: 0 auto;
 }
@@ -65,7 +65,7 @@
 }
 
 .temp {
-    font-size: larger;
+    font-size: 30px;
     background-color: #c7e6fd;
     max-width: 80%;
     display: block;
@@ -131,8 +131,9 @@
     text-transform: capitalize;
 }
 
-#units {
+.units {
     position: relative;
-    margin-right: 20px;
-    margin-top: 50px;
+        top: -40px;
+        left: 50px;
+        font-size:20px;
 }
