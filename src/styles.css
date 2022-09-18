@@ -53,6 +53,7 @@
 }
 
 
+
 .text-explain {
     font-style: italic;
     color: rgb(221, 61, 93);
@@ -136,4 +137,14 @@
         top: -40px;
         left: 50px;
         font-size:20px;
+}
+
+.active {
+    color:black;
+    cursor:default;
+}
+
+.active:hover {
+    text-decoration: none;
+    color:inherit;
 }
