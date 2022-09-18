@@ -18,7 +18,7 @@ let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
 
 function showTemp(response) {
-  console.log(response.data);
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -59,4 +59,16 @@ function getLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getLocation);
-search("Parma");
+
+function showFahrenheitTemp (event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let FahrenheitTemp = Math.round((celsiusTemperature * 9/5) + 32);
+  temperatureElement.innerHTML = FahrenheitTemp;
+}
+
+let celsiusTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+search("Parma")
