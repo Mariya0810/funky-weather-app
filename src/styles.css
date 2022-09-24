@@ -1,6 +1,10 @@
 .container {
     font-family: "Ubuntu", sans-serif;
-}
+    }
+
+    .body-color {
+        background: #DBE9D3;
+    }
 
 .form-group {
     width: 60%;
@@ -9,7 +13,12 @@
 .card {
     margin-top: 20px;
     padding: 10px;
-}
+    background:  linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+    border-color: #273E35 !important;
+                border-radius: 2em;
+        box-shadow: 5px 5px #273E35;
+    }
+
 
 .title {
     font-size: 30px;
@@ -18,32 +27,19 @@
     font-size: 25px;
 
 }
-.selected {
-    font-size: 12px;
-    background-color: #c7e6fd;
-}
-
-.not-selected {
-    font-size: 12px;
-}
 
 .weather-card {
-    border-color: #c7e6fd !important;
+    border-color: #273E35 !important;
     transform: skew(-10deg);
+    border-radius: 2em;
+    box-shadow: 5px 5px #273E35;
 }
 
 .text {
     transform: skew(10deg);
-    font-size: 20px;
+    font-size: 30px;
 }
 
-.temp {
-    font-size: larger;
-    background-color: #c7e6fd;
-    max-width: 50%;
-    display: block;
-    margin: 0 auto;
-}
 
 .temp-explain {
     font-size: 15px;
@@ -53,24 +49,10 @@
 }
 
 
-
-.text-explain {
-    font-style: italic;
-    color: rgb(221, 61, 93);
-    font-size: 15px;
-}
-
-.text {
-    transform: skew(10deg);
-    font-size: 20px;
-}
-
 .temp {
-    font-size: 30px;
-    background-color: #c7e6fd;
-    max-width: 80%;
+    font-size: 40px;
     display: block;
-    margin: 0 auto;
+    margin-left: -10px;
 }
 
 .temp-explain {
@@ -82,40 +64,23 @@
 
 .text-other {
     transform: skew(10deg);
-    font-size: 18px;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .temp-other {
-    font-size: medium;
-    background-color: #c7e6fd;
-    max-width: 80%;
+    font-size: 25px;
     display: block;
     margin: 0 auto;
 }
 
-.temp-explain-other {
-    font-size: 15px;
-    font-style: italic;
-    margin-left: -15px;
-    margin-top: -15px;
+.temp-min{
+    opacity: 0.7;
 }
 
-.text-explain-other {
-    font-style: italic;
-    color: rgb(221, 61, 93);
-    font-size: 15px;
-}
-
-
-
-.text-explain-normal {
-    font-style: italic;
-    color: #386385;
-    font-size: 15px;
-}
 
 .col {
-    margin-top: 30px !important;
+    margin-top: 60px !important;
 }
 
 
@@ -148,3 +113,4 @@
     text-decoration: none;
     color:inherit;
 }
+
