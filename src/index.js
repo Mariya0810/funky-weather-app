@@ -12,7 +12,7 @@ let days = [
   "Saturday"
 ];
 let today = days[now.getDay()];
-currentDate.innerHTML = `${today}, ${hours}:${minutes} CEST`;
+currentDate.innerHTML = `${today} ${hours}:${minutes} CEST`;
 
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
