@@ -24,7 +24,7 @@
     font-size: 30px;
 }
 .subtitle {
-    font-size: 25px;
+    font-size: 20px;
 
 }
 
@@ -40,12 +40,10 @@
     font-size: 30px;
 }
 
-
-.temp-explain {
-    font-size: 15px;
-    font-style: italic;
-    margin-left: -15px;
-    margin-top: -15px;
+.col.temp-explain {
+    opacity: 0.7;
+    font-size: 17px;
+  
 }
 
 
@@ -55,12 +53,7 @@
     margin-left: -10px;
 }
 
-.temp-explain {
-    font-size: 20px;
-    font-style: italic;
-    margin-left: -15px;
-    margin-top: -15px;
-}
+
 
 .text-other {
     transform: skew(10deg);
@@ -79,8 +72,8 @@
 }
 
 
-.col {
-    margin-top: 60px !important;
+.col-9 {
+    margin-top: 33px !important;
 }
 
 
@@ -93,8 +86,14 @@
     margin-top: -35px;
 }
 
-#description::first-letter{
+.description{
+    margin-top: 5px;
+    color: black;
+}
+
+.description:first-letter {
     text-transform: capitalize;
+    
 }
 
 .units {
@@ -114,3 +113,11 @@
     color:inherit;
 }
 
+.humid{    
+    margin-top: -10px;
+    margin-left: -25px;
+}
+.windy{
+    margin-top: -10px;
+    margin-left: -25px;
+}
