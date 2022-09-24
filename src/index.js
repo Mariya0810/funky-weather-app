@@ -17,24 +17,6 @@ currentDate.innerHTML = `${today}, ${hours}:${minutes} CEST`;
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
 
-function displayForecast () {
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-  days.forEach(function (day){
-    forecastHTML = forecastHTML + `<div class="col m-1 border weather-card">
-                    <p class="text-other">${day}</p></br>
-          <p><img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon"></img></p>
-                    <p class="temp-other">
-                    <span class ="temp-max">18°</span> 
-                    <span class="temp-min">10°</span>
-                    </p>
-                         </div>`
-  })
-  forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
-}
-
 function showTemp(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city-name").innerHTML = response.data.name;
@@ -48,12 +30,12 @@ function showTemp(response) {
   );
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  let descriptionElement = document.querySelector(".description");
+  let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
 
 }
 function search(city) {
-  let apiKey = "fe1483f743b581b5520a1b725af03a49";
+  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
@@ -104,5 +86,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 
-search("Parma");
-displayForecast ();
+search("Parma")
