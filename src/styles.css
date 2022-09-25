@@ -38,6 +38,7 @@
 .text {
     transform: skew(10deg);
     font-size: 30px;
+
 }
 
 .col-6.temp-explain {
@@ -59,7 +60,7 @@
 .text-other {
     transform: skew(10deg);
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
 }
 
 .temp-other {
@@ -74,7 +75,7 @@
 
 
 .col-9 {
-    margin-top: 33px !important;
+    margin-top: 25px !important;
 }
 
 
@@ -86,6 +87,7 @@
 
 #icon {
     margin-top: -35px;
+    margin-bottom:-30px;
 }
 
 .description{
