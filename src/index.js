@@ -47,16 +47,16 @@ function showTemp(response) {
   let descriptionElement = document.querySelector(".description");
   descriptionElement.innerHTML = response.data.weather[0].description;
    if (descriptionElement.innerHTML.match(/^(rain|thunderstorm|shower rain)$/)){
-    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbvABJXBIyiY?utm_source=generator" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbvABJXBIyiY?utm_source=generator" width="190%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
   };
   if (descriptionElement.innerHTML.match(/^(overcast clouds|mist|broken clouds|scattered clouds|few clouds)$/)){
-    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3YAVyJshVCi35fyx81egaC?utm_source=generator&theme=0" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3YAVyJshVCi35fyx81egaC?utm_source=generator&theme=0" width="190%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
   };
    if (descriptionElement.innerHTML==`clear sky`){
-    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2O5DOhoUcrmRlIZvxaFbVN?utm_source=generator&theme=0" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2O5DOhoUcrmRlIZvxaFbVN?utm_source=generator&theme=0" width="190%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
   };
    if (descriptionElement.innerHTML==`snow`){
-    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1dC149rn4sVCbrsvnt2bWX?utm_source=generator&theme=0" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1dC149rn4sVCbrsvnt2bWX?utm_source=generator&theme=0" width="190%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
   };
    
  getForecast(response.data.coord);
