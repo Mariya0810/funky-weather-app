@@ -35,6 +35,24 @@
     box-shadow: 5px 5px #273E35;
 }
 
+button {
+    font-weight: bold;
+    padding: 5px 15px;
+    color: black;
+    background:#5CBAB7; 
+        border-color: #273E35;
+        border-radius: 2em;
+        box-shadow: 2px 2px #273E35;
+        font-size: 15px;
+    }
+
+button:hover {
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);;
+}
+
 .text {
     transform: skew(10deg);
     font-size: 30px;
