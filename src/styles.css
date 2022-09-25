@@ -39,7 +39,7 @@ button {
     font-weight: bold;
     padding: 5px 15px;
     color: black;
-    background:#5CBAB7; 
+    background:#6acac7; 
         border-color: #273E35;
         border-radius: 2em;
         box-shadow: 2px 2px #273E35;
@@ -93,7 +93,7 @@ background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212
 
 
 .col-9 {
-    margin-top: 25px !important;
+    margin-top: 20px !important;
 }
 
 
@@ -109,8 +109,10 @@ background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212
 }
 
 .description{
-    margin-top: 5px;
+    margin-top: 9px;
+    margin-left:-12px;
     color: black;
+    font-size:20px;
 }
 
 .description:first-letter {
@@ -137,10 +139,10 @@ background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212
 
 .humid{    
     margin-top: -10px;
-    margin-left: -25px;
+    margin-left: -20px;
 }
 .windy{
     margin-top: -10px;
-    margin-left: -25px;
+    margin-left: -20px;
 }
 
