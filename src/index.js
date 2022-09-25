@@ -17,6 +17,52 @@ currentDate.innerHTML = `${today} ${hours}:${minutes} CEST`;
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", handleSubmit);
 
+
+  function handleSubmit(event) {
+  event.preventDefault();
+  let searchValue = document.querySelector(".form-control");
+  let city = searchValue.value;
+  search(city);
+};
+
+function search(city) {
+  let apiKey = "c513a9cf967fcf70a0c6fed797bfa578";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemp);
+  };
+
+function showTemp(response) {
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  let descriptionElement = document.querySelector(".description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+   if (descriptionElement.innerHTML.match(/^(rain|thunderstorm|shower rain)$/)){
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbvABJXBIyiY?utm_source=generator" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+  };
+  if (descriptionElement.innerHTML.match(/^(overcast clouds|mist|broken clouds|scattered clouds|few clouds)$/)){
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3YAVyJshVCi35fyx81egaC?utm_source=generator&theme=0" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+  };
+   if (descriptionElement.innerHTML==`clear sky`){
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2O5DOhoUcrmRlIZvxaFbVN?utm_source=generator&theme=0" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+  };
+   if (descriptionElement.innerHTML==`snow`){
+    document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1dC149rn4sVCbrsvnt2bWX?utm_source=generator&theme=0" width="180%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
+  };
+   
+ getForecast(response.data.coord);
+ }
+
+
 function displayForecast (response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -49,35 +95,7 @@ function displayForecast (response) {
     let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(displayForecast);
   }
-function showTemp(response) {
-  celsiusTemperature = response.data.main.temp;
-  document.querySelector("#city-name").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#city-name").innerHTML = response.data.name;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  let descriptionElement = document.querySelector(".description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  getForecast(response.data.coord);
- }
 
-function search(city) {
-  let apiKey = "fe1483f743b581b5520a1b725af03a49";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemp);
-  }
-function handleSubmit(event) {
-  event.preventDefault();
-  let searchValue = document.querySelector(".form-control");
-  let city = searchValue.value;
-  search(city);
-}
 
 function searchLocation(position) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
@@ -85,13 +103,14 @@ function searchLocation(position) {
   axios.get(apiUrl).then(showTemp);
 }
 
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getLocation);
+
 function getLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-let currentLocationButton = document.querySelector(".current-location-button");
-currentLocationButton.addEventListener("click", getLocation);
 
 function showFahrenheitTemp (event){
   event.preventDefault();
