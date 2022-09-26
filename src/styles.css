@@ -60,6 +60,7 @@ background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212
 }
 
 .col-6.temp-explain {
+    position: relative;
     opacity: 0.7;
     font-size: 17px;
     margin-left: -60px;
@@ -147,3 +148,9 @@ background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212
     margin-left: -20px;
 }
 
+#player{
+    position:relative;
+}
+#city-name{
+    font-size: 30px !important;
+}
