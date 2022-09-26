@@ -98,8 +98,10 @@ background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212
 
 
 .link-github {
-   margin-top: 10px;
-   color: black;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 100px;
+    color: black;
 }
 
 #icon {
