@@ -46,7 +46,7 @@ function showTemp(response) {
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   let descriptionElement = document.querySelector(".description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-   if (descriptionElement.innerHTML.match(/^(rain|thunderstorm|shower rain)$/)){
+   if (descriptionElement.innerHTML.match(/^(rain|thunderstorm|shower rain|moderate rain)$/)){
     document.querySelector("#player").innerHTML=`<p><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbvABJXBIyiY?utm_source=generator&theme=0" width="190%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>`;
   };
   if (descriptionElement.innerHTML.match(/^(overcast clouds|mist|broken clouds|scattered clouds|few clouds)$/)){
